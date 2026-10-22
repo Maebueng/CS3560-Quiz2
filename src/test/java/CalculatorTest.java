@@ -14,8 +14,10 @@ public class CalculatorTest {
 
     @Test
     public void testSubtract() {
-        int expected = -1;
-        int actual = calculator.subtract(2, 3);
-        assertEquals(expected, actual);
+        // Case 1: Positive minus negative
+        assertEquals(8, calculator.subtract(5, -3));
+
+        // Case 2: Negative minus negative
+        assertEquals(-2, calculator.subtract(-5,-3));
     }
 }
