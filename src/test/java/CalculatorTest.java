@@ -30,4 +30,16 @@ public class CalculatorTest {
         // Case 2: Multiply negative number
         assertEquals(-1, calculator.multiply(1, -1));
     }
+
+    @Test
+    public void testDivide() {
+        assertEquals(2, calculator.divide(6,3));
+    }
+
+    @Test
+    public void testDivideByZero() {
+        assertThrows(ArithmeticException.class, () -> {
+            calculator.divide(6, 0);
+        });
+    }
 }
